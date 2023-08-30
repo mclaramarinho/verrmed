@@ -2,7 +2,7 @@ import React from "react";
 import navLogo from "../assets/logo-navbar.png"
 function Navbar (){
     return(
-        <div className="navbar navbar-expand-lg px-4 py-5 ">
+        <div className="navbar navbar-expand-lg px-4 py-5 " id="navbar">
             <div className="container-fluid">
                 <a href="" className="navbar-brand"><img src={navLogo} alt="" /></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-options" aria-controls="menu-options" aria-expande="false" aria-label="toggle navigation">

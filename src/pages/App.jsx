@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import SearchArea from "../components/SearchArea";
 import ResultCard from "../components/ResultCard";
 import { ClipLoader } from "react-spinners";
+import TopoBtn from "../components/TopoBtn";
+
 
 function App(){
     let pages = 0;
@@ -13,7 +15,7 @@ function App(){
             setSplash(false)
         }, 2000);
     })
-    
+    const [isScrollable, setIsScrollable] = useState(document.querySelector("html").scrollHeight > window.innerHeight)
     const [resultado, setResultado] = useState([]);
     const [textError, setTextError] = useState(false);
     const [alergError, setAlergError] = useState(false);
@@ -43,8 +45,10 @@ function App(){
         alerg===null || alerg.length < 1 ? setAlergError(true) : setAlergError(false);
         if((alerg.length >= 1) && (text.length >= 1)){
             console.log("triggered")
+            setIsScrollable(false)
             await getPages(text);
             await generateResult(text, pages);
+            setIsScrollable(document.querySelector("html").scrollHeight > window.innerHeight)
         }
         
     }
@@ -91,8 +95,9 @@ function App(){
                 
             })
         }
+        
         setTimeout(() => {
-            return setSearchEnd(true), setLoading(false);
+            return setSearchEnd(true), setLoading(false), setIsScrollable(document.querySelector("html").scrollHeight > window.innerHeight);
         }, [3000]);
         
     }
@@ -111,6 +116,8 @@ function App(){
         }
         return response;
     }
+    
+    
     if(splash){
         return <Splash />
     }else{
@@ -123,10 +130,8 @@ function App(){
                     handleBusca={handleBusca}
                 />
                 
-                <div className="text-center">
+                <div className="text-center mb-4">
                     {resultado.length > 0 && searchEnd===true && (
-                        console.log(resultado[0].length),
-                        console.log(searchEnd),
                         resultado[0].map((item) => {
                             const alergenico = verificarAlergenico(item)
                             const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
@@ -140,6 +145,8 @@ function App(){
                         size={50}
                         cssOverride={{margin:"0 auto"}}                
                     />)}
+
+                    {isScrollable && <TopoBtn />}
                 </div>
             </div>)
     }
