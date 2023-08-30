@@ -44,7 +44,6 @@ function App(){
 
         alerg===null || alerg.length < 1 ? setAlergError(true) : setAlergError(false);
         if((alerg.length >= 1) && (text.length >= 1)){
-            console.log("triggered")
             setIsScrollable(false)
             await getPages(text);
             await generateResult(text, pages);
@@ -87,7 +86,7 @@ function App(){
                     res = JSON.parse(res);
                     res.content.map(async (item) => {
                         const princ = await getPrincipioAtivo(item.numProcesso)
-                        previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido ]);
+                        previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido]);
                         return setResultado([previa])
                     })
                     resolve();
