@@ -14,7 +14,7 @@ function ResultCard (props){
     const urlBula = `https://bula.vercel.app/pdf?id=${props.bula}`
     return(
             
-        <div class="card-container result-card container mb-5" style={{textAlign:"left"}}>
+        <div class="card-container result-card container mb-4" style={{textAlign:"left"}}>
             <div class="c c1 latBar" style={{backgroundColor:latBarColor}}></div>
             <div class="c c2">
                 <div class="ps-2 pt-2 r sr1 marca">{marca}</div>
