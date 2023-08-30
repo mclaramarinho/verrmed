@@ -11,17 +11,17 @@ function Navbar (){
                 <div className="collapse navbar-collapse" id="menu-options">
                     <ul className="navbar-nav mt-3 ms-auto mb-2 mb-lg-0">
                         <li className="nav-item" >
-                            <a href="" className="nav-link active" aria-current="page">
+                            <a href="/sobre" className="nav-link active" aria-current="page">
                                 SOBRE NOS
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="" className="nav-link active" aria-current="page">
+                            <a href="/contato" className="nav-link active" aria-current="page">
                                 CONTATO
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="" className="nav-link active" aria-current="page">
+                            <a href="/faq" className="nav-link active" aria-current="page">
                                 PERGUNTAS FREQUENTES
                             </a>
                         </li>

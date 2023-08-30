@@ -7,7 +7,7 @@ import { ClipLoader } from "react-spinners";
 import TopoBtn from "../components/TopoBtn";
 
 
-function App(){
+function Main(){
     let pages = 0;
     const [splash, setSplash] = useState(true);
     useEffect(()=>{
@@ -151,4 +151,4 @@ function App(){
     }
 }
 
-export default App;
+export default Main;

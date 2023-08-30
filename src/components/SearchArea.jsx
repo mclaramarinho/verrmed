@@ -36,7 +36,7 @@ function SearchArea (props){
             <div className="textInput">
                 <label className="form-label" htmlFor="nome-med">NOME DO MEDICAMENTO <i onClick={()=>setHelpOne(true)} class="fa-solid fa-circle-info"></i></label>
                 <input value={textValue} onChange={handleText} placeholder="Escreva o nome do medicamento..." className="form-control" type="text" id="nome-med"/>
-                {textError && <p className="error-msg">Campo obrigatorio!</p>}
+                {textError && <p className="error-msg">Campo obrigatório</p>}
             </div>
             <div>
                 <label className="form-label" htmlFor="alergy-select">ALERGIAS <i onClick={()=>setHelpTwo(true)} class="fa-solid fa-circle-info"></i></label>
@@ -48,7 +48,7 @@ function SearchArea (props){
                     emptyRecordMsg="Nenhuma opção restante"
                     ref={multiselectRef}
                 />
-                {alergError && <p className="error-msg">Campo obrigatorio!</p>}
+                {alergError && <p className="error-msg">Campo obrigatório</p>}
 
             </div>
             <div className="btn-container mb-5">
