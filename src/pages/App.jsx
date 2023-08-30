@@ -3,6 +3,7 @@ import Splash from "../components/Splash";
 import Navbar from "../components/Navbar";
 import SearchArea from "../components/SearchArea";
 import ResultCard from "../components/ResultCard";
+import { ClipLoader } from "react-spinners";
 
 function App(){
     let pages = 0;
@@ -66,8 +67,10 @@ function App(){
             
     }
     const [searchEnd, setSearchEnd] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     async function generateResult(text, p) {
+        setLoading(true);
         setResultado([])
         let previa = [];
         for (let i = 1; i <= p; i++) {
@@ -88,7 +91,10 @@ function App(){
                 
             })
         }
-        return setSearchEnd(true);
+        setTimeout(() => {
+            return setSearchEnd(true), setLoading(false);
+        }, [3000]);
+        
     }
     function verificarAlergenico(item){
         let response =[];
@@ -116,15 +122,24 @@ function App(){
                     alergError={alergError}
                     handleBusca={handleBusca}
                 />
+                
+                
                 {resultado.length > 0 && searchEnd===true && (
                     console.log(resultado[0].length),
                     console.log(searchEnd),
-                    resultado[0].map(item => {
+                    resultado[0].map((item) => {
                         const alergenico = verificarAlergenico(item)
                         const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
                         return <ResultCard alergenicos={alergenico} seg={seg} droga={item[2]} marca={item[3]} bula={item[4]}/>
                     })
                 )}
+
+                {loading && (<ClipLoader
+                    color="#294F40"
+                    loading={true}
+                    size={100}
+                    cssOverride={{margin: "0 auto"}}                
+                />)}
             </div>)
     }
 }
