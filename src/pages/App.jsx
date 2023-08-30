@@ -123,23 +123,24 @@ function App(){
                     handleBusca={handleBusca}
                 />
                 
-                
-                {resultado.length > 0 && searchEnd===true && (
-                    console.log(resultado[0].length),
-                    console.log(searchEnd),
-                    resultado[0].map((item) => {
-                        const alergenico = verificarAlergenico(item)
-                        const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
-                        return <ResultCard alergenicos={alergenico} seg={seg} droga={item[2]} marca={item[3]} bula={item[4]}/>
-                    })
-                )}
+                <div className="text-center">
+                    {resultado.length > 0 && searchEnd===true && (
+                        console.log(resultado[0].length),
+                        console.log(searchEnd),
+                        resultado[0].map((item) => {
+                            const alergenico = verificarAlergenico(item)
+                            const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
+                            return <ResultCard alergenicos={alergenico} seg={seg} droga={item[2]} marca={item[3]} bula={item[4]}/>
+                        })
+                    )}
 
-                {loading && (<ClipLoader
-                    color="#294F40"
-                    loading={true}
-                    size={100}
-                    cssOverride={{margin: "0 auto"}}                
-                />)}
+                    {loading && (<ClipLoader
+                        color="#294F40"
+                        loading={true}
+                        size={100}
+                        cssOverride={{margin:"0 auto"}}                
+                    />)}
+                </div>
             </div>)
     }
 }
