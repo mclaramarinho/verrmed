@@ -65,7 +65,8 @@ function App(){
         
             
     }
-    
+    const [searchEnd, setSearchEnd] = useState(false);
+
     async function generateResult(text, p) {
         setResultado([])
         let previa = [];
@@ -78,14 +79,16 @@ function App(){
                     let res = req.response;
                     res = JSON.parse(res);
                     res.content.map(async (item) => {
-                    const princ = await getPrincipioAtivo(item.numProcesso)
-                    previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido ]);
-                    return setResultado([previa])
+                        const princ = await getPrincipioAtivo(item.numProcesso)
+                        previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido ]);
+                        return setResultado([previa])
                     })
                     resolve();
                 };
+                
             })
         }
+        return setSearchEnd(true);
     }
     function verificarAlergenico(item){
         let response =[];
@@ -113,8 +116,9 @@ function App(){
                     alergError={alergError}
                     handleBusca={handleBusca}
                 />
-                {resultado.length > 0 && (
+                {resultado.length > 0 && searchEnd===true && (
                     console.log(resultado[0].length),
+                    console.log(searchEnd),
                     resultado[0].map(item => {
                         const alergenico = verificarAlergenico(item)
                         const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
