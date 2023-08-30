@@ -1,0 +1,179 @@
+*{
+    background-color: #E5F2ED;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+/*NAVBAR*/
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='hsl(156, 32%, 24%)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.nav-link{
+    color: #294F40 !important;
+    font-weight: 600;
+}
+.nav-link:hover{
+    color: #294f40aa !important;
+}
+/*BODY COMPONENTS*/
+.result-card{
+    margin: 0 auto;
+}
+@media (max-width: 576px) {
+    .searchArea, .result-card{
+        width: 90vw;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px){
+    .searchArea, .result-card{
+        width: 60vw;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px){
+    .searchArea, .result-card{
+        width: 50vw;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1400px){
+    .searchArea, .result-card{
+        width: 40vw;
+    }
+}
+@media (min-width: 1400px){
+    .searchArea, .result-card{
+        width: 30vw;
+    }
+}
+
+/*SEARCH AREA*/
+
+/*Text input*/
+#nome-med{
+    background-color: hsl(0, 0%, 99.5%);
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #294F40;
+}
+.form-label{
+    font-weight: 700;
+    color: #294F40;
+}
+.textInput{
+    margin-bottom: 2vh;
+}
+/*Multiselect dropdown*/
+.chip, .chip > img{
+    background-color: #294F40 !important;
+    font-weight: 600;
+}
+ 
+.option{
+    background-color: #294f40aa !important;
+    color: white;
+    font-weight: 600;
+}
+.highlightOption{
+    background-color: #294F40 !important;
+}
+.searchWrapper{
+    background-color: hsl(0, 0%, 99.5%);
+    border: none;
+}
+#search_input::placeholder, #nome-med::placeholder{
+    color: #294f40aa;
+}
+#search_input{
+    width: 100%;
+    color: #294F40;
+}
+
+/*Buttons*/
+.btn-container{
+    text-align: center;
+}
+.buscar{
+    background-color: #294F40;
+    color: #E5F2ED;
+    font-weight: 700;
+    width: 80%;
+
+}
+.buscar:hover{
+    background-color: #294f40aa;
+    color: #E5F2ED;
+}
+.limpar{
+    border: none;
+    text-decoration: none;
+    color: #294F40;
+    font-weight: 700;
+}
+.limpar:hover{
+    color: #294f40aa;
+}
+
+/*RESULT CARD*/
+.latBar{
+}
+.marca{
+    font-size: 0.8rem;
+    color:#294F40;
+}
+.droga{
+    font-size: 2vh;
+    font-weight: 700;
+    color: #294F40;
+}
+
+.card-container{
+    display: flex;
+    border-radius: 10px;
+    
+}
+
+.c1{
+    box-sizing: content-box;
+    width: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.c2{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sr1, .sr2, .sc, .bgl{
+    background-color: hsl(0, 0%, 99.5%);
+}
+.sr1{
+    border-top-right-radius: 10px;
+}
+.r2{
+    display: flex;
+}
+.sc{
+    width: 50%;
+}
+.sc2{
+    border-bottom-right-radius: 10px;
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+.sc1{
+    display: inline-block;
+    >img{
+        margin-top: 2vh;
+    };
+}
