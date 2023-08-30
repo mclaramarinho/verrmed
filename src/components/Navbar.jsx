@@ -9,7 +9,7 @@ function Navbar (){
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="menu-options">
-                    <ul className="navbar-nav mt-3 ms-auto mb-2 mb-lg-0 text-center">
+                    <ul className="navbar-nav mt-3 ms-auto mb-2 mb-lg-0">
                         <li className="nav-item" >
                             <a href="" className="nav-link active" aria-current="page">
                                 SOBRE NOS
