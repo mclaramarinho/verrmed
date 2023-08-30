@@ -12,6 +12,12 @@ function App(){
             setSplash(false)
         }, 2000);
     })
+    
+    const [resultado, setResultado] = useState([]);
+    const [textError, setTextError] = useState(false);
+    const [alergError, setAlergError] = useState(false);
+    const [alergias, setAlergias] = useState([]);
+
     function getPages (text){
         const req = new XMLHttpRequest();
         req.open("GET", `https://bula.vercel.app/pesquisar?nome=${text}`);
@@ -26,11 +32,7 @@ function App(){
             
         })
     }
-    const [resultado, setResultado] = useState([]);
-    const [textError, setTextError] = useState(false);
-    const [alergError, setAlergError] = useState(false);
-    const [alergias, setAlergias] = useState([]);
-
+    
     async function handleBusca(){
         const text = document.getElementById("nome-med").getAttribute("value");
         text===null || text.length < 1 ? setTextError(true) : setTextError(false);
@@ -77,10 +79,10 @@ function App(){
                     res = JSON.parse(res);
                     res.content.map(async (item) => {
                     const princ = await getPrincipioAtivo(item.numProcesso)
-                    return previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido ]);
+                    previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido ]);
+                    return setResultado([previa])
                     })
                     resolve();
-                    return setResultado([previa])
                 };
             })
         }
@@ -112,6 +114,7 @@ function App(){
                     handleBusca={handleBusca}
                 />
                 {resultado.length > 0 && (
+                    console.log(resultado[0].length),
                     resultado[0].map(item => {
                         const alergenico = verificarAlergenico(item)
                         const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;

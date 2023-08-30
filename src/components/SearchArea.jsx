@@ -55,12 +55,12 @@ function SearchArea (props){
                 <div className="row mt-4 mb-2">
                     <div className="col"></div>
                     <div className="col-md-6 col-sm-8 col-9">
-                        <button onClick={()=>busca()} className="btn btn-lg buscar">BUSCAR</button>
+                        <button onClickCapture={()=>busca()} className="btn btn-lg buscar">BUSCAR</button>
                     </div>
                     <div className="col"></div>
                 </div>
                 
-                <a href="#" onClick={() => multiselectRef.current.resetSelectedValues()} className="limpar">LIMPAR FILTROS</a>
+                <a href="#" onClickCapture={() => multiselectRef.current.resetSelectedValues()} className="limpar">LIMPAR FILTROS</a>
             </div>
         </div>
     )
