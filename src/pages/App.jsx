@@ -137,7 +137,7 @@ function App(){
                     {loading && (<ClipLoader
                         color="#294F40"
                         loading={true}
-                        size={100}
+                        size={50}
                         cssOverride={{margin:"0 auto"}}                
                     />)}
                 </div>
