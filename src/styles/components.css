@@ -119,6 +119,12 @@
 }
 .limpar:hover{
     color: #294f40aa;
+    
+}
+
+.error-msg{
+    color: #990000;
+    font-size: 0.8rem;
 }
 
 /*RESULT CARD*/
