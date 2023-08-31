@@ -5,6 +5,7 @@ import SearchArea from "../components/SearchArea";
 import ResultCard from "../components/ResultCard";
 import { ClipLoader } from "react-spinners";
 import TopoBtn from "../components/TopoBtn";
+import Footer from "../components/Footer";
 
 
 function Main(){
@@ -13,6 +14,7 @@ function Main(){
     useEffect(()=>{
         setTimeout(() => {
             setSplash(false)
+            setFooterPosition("fixed")
         }, 2000);
     })
     const [isScrollable, setIsScrollable] = useState(document.querySelector("html").scrollHeight > window.innerHeight)
@@ -73,6 +75,7 @@ function Main(){
     const [loading, setLoading] = useState(false);
 
     async function generateResult(text, p) {
+        setFooterPosition("fixed")
         setLoading(true);
         setResultado([])
         let previa = [];
@@ -96,7 +99,7 @@ function Main(){
         }
         
         setTimeout(() => {
-            return setSearchEnd(true), setLoading(false), setIsScrollable(document.querySelector("html").scrollHeight > window.innerHeight);
+            return setSearchEnd(true), setLoading(false), setIsScrollable(document.querySelector("html").scrollHeight > window.innerHeight), setFooterPosition("sticky");
         }, [3000]);
         
     }
@@ -116,7 +119,8 @@ function Main(){
         return response;
     }
     
-    
+    const [footerPosition, setFooterPosition] = useState();
+
     if(splash){
         return <Splash />
     }else{
@@ -129,7 +133,7 @@ function Main(){
                     handleBusca={handleBusca}
                 />
                 
-                <div className="text-center mb-4">
+                <div className="text-center mb-5">
                     {resultado.length > 0 && searchEnd===true && (
                         resultado[0].map((item) => {
                             const alergenico = verificarAlergenico(item)
@@ -147,6 +151,7 @@ function Main(){
 
                     {isScrollable && <TopoBtn />}
                 </div>
+                <Footer position={footerPosition} />
             </div>)
     }
 }
