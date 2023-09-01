@@ -157,7 +157,6 @@ function Main(){
                 <div className="text-center mb-5">
                     {resultado.length > 0 && searchEnd===true && (
                         resultado[0].map((item) => {
-                            console.log(item[5])
                             const alergenico = verificarAlergenico(item)
                             const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
                             if(!item[5].includes("Injetável")){

@@ -9,7 +9,7 @@ const teamMembers = [
         id:2,
         nome:"Tatiana Limongi",
         funcao:"Product Owner",
-        avatar:"https://i.ibb.co/LS2JFDt/tatiana-limongi.png"
+        avatar:"https://i.ibb.co/n6P5LjT/tatiana-limongi.png"
     },
     {
         id:3,

@@ -12,7 +12,7 @@ function Navbar (){
                     <ul className="navbar-nav mt-3 ms-auto mb-2 mb-lg-0">
                         <li className="nav-item" >
                             <a href="/sobre" className="nav-link active" aria-current="page">
-                                SOBRE NOS
+                                SOBRE NÓS
                             </a>
                         </li>
                         <li className="nav-item">

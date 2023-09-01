@@ -23,7 +23,7 @@ function ResultCard (props){
                 <div class="r r2 ">
                     <div class="ps-2 sc sc1 pt-3">
                         {safety===1 && <img className="bgl" src={safeIcon} alt="" />}
-                        {safety===2 && <p className="bgl" style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}}>Contem {alergenicos}</p>}
+                        {safety===2 && <p className="bgl" style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}}>Contém {alergenicos}</p>}
                         {safety===3 && 
                             <div style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}} className="container bgl marca">
                                 <div className="row">
