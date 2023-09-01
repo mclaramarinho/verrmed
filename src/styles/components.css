@@ -27,7 +27,7 @@
     text-align: right;
 }
 /*BODY COMPONENTS*/
-.result-card, #faq{
+.result-card, #faq, #sobre{
     margin: 0 auto;
 }
 @media (max-width: 576px) {
@@ -37,24 +37,27 @@
     #faq{
         width: 75vw;
     }
+    #sobre{
+        width: 80vw;
+    }
 }
 @media (min-width: 576px) and (max-width: 768px){
-    .searchArea, .result-card, #faq{
+    .searchArea, .result-card, #faq, #sobre{
         width: 60vw;
     }
 }
 @media (min-width: 768px) and (max-width: 1200px){
-    .searchArea, .result-card, #faq{
+    .searchArea, .result-card, #faq, #sobre{
         width: 50vw;
     }
 }
 @media (min-width: 1200px) and (max-width: 1400px){
-    .searchArea, .result-card, #faq{
+    .searchArea, .result-card, #faq, #sobre{
         width: 40vw;
     }
 }
 @media (min-width: 1400px){
-    .searchArea, .result-card, #faq{
+    .searchArea, .result-card, #faq, #sobre{
         width: 30vw;
     }
 }
@@ -214,6 +217,10 @@
     --bs-accordion-border-radius: 10px;
     border-radius: 10px !important;
 }
+.accordion-header{
+    box-sizing: border-box;
+}
+
 
 /*HEADER*/
 h1{
@@ -224,7 +231,16 @@ h1{
 }
 
 /*ALT PAGES*/
-
+h3{
+    font-weight: 600;
+    color: #294F40;
+}
+#sobre{
+    margin-bottom: 8vh;
+}
+#sobre > p{
+    color: #294F40;
+}
 #back-btn{
     padding: 0;
     color: #294F40;
@@ -252,4 +268,24 @@ h1{
     background-color: #294f40aa;
     color: hsl(0, 0%, 99.5%);
     font-weight: 600;
+}
+#team-member-container, .sobre-info{
+    color: #294F40;
+}
+.sobre-info{
+    margin-bottom: 5vh;
+}
+.no-pad{
+    padding-right: 0;
+    padding-left: 0;
+}
+.member-name{
+    font-weight: 600;
+    font-size: 1.8vh;
+}
+.member-funcao{
+    font-size: 1.3vh;
+}
+.avatar{
+    border-radius: 100%;
 }
