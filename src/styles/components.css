@@ -40,24 +40,27 @@
     #sobre{
         width: 80vw;
     }
+    #ResultNotFound{
+        width: 90vw;
+    }
 }
 @media (min-width: 576px) and (max-width: 768px){
-    .searchArea, .result-card, #faq, #sobre{
+    .searchArea, .result-card, #faq, #sobre, #ResultNotFound{
         width: 60vw;
     }
 }
 @media (min-width: 768px) and (max-width: 1200px){
-    .searchArea, .result-card, #faq, #sobre{
+    .searchArea, .result-card, #faq, #sobre, #ResultNotFound{
         width: 50vw;
     }
 }
 @media (min-width: 1200px) and (max-width: 1400px){
-    .searchArea, .result-card, #faq, #sobre{
+    .searchArea, .result-card, #faq, #sobre, #ResultNotFound{
         width: 40vw;
     }
 }
 @media (min-width: 1400px){
-    .searchArea, .result-card, #faq, #sobre{
+    .searchArea, .result-card, #faq, #sobre, #ResultNotFound{
         width: 30vw;
     }
 }
@@ -292,4 +295,16 @@ h3{
 }
 .avatar{
     border-radius: 100%;
+}
+
+/* RESULT NOT FOUND */
+#ResultNotFound{
+    color: #294F40;
+}
+.L1{
+    font-weight: 700;
+    font-size: 2.1vh;
+}
+.L2{
+    font-size: 2vh;
 }

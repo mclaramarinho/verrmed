@@ -7,6 +7,7 @@ import { ClipLoader } from "react-spinners";
 import TopoBtn from "../components/TopoBtn";
 import Footer from "../components/Footer";
 import apresentacoes from "../apresentacoes";
+import ResultNotFound from "../components/ResultNotFound";
 
 function Main(){
     let pages = 0;
@@ -39,6 +40,7 @@ function Main(){
     }
     
     async function handleBusca(){
+        setSearchEnd(false)
         const text = document.getElementById("nome-med").getAttribute("value");
         text===null || text.length < 1 ? setTextError(true) : setTextError(false);
         let alerg = Array.from(document.querySelectorAll(".chip"));
@@ -162,7 +164,13 @@ function Main(){
                                 return <ResultCard forma={item[5]} alergenicos={alergenico} seg={seg} droga={item[2]} marca={item[3]} bula={item[4]}/>
                             }
                         })
+                        
                     )}
+                    {
+                        searchEnd===true && resultado.length === 0 &&(
+                            <ResultNotFound />
+                        )
+                    }
 
                     {loading && (<ClipLoader
                         color="#294F40"
