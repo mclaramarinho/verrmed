@@ -24,7 +24,17 @@ function ResultCard (props){
                     <div class="ps-2 sc sc1 pt-3">
                         {safety===1 && <img className="bgl" src={safeIcon} alt="" />}
                         {safety===2 && <p className="bgl" style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}}>Contem {alergenicos}</p>}
-                        {safety===3 && <div style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}} className="bgl"><i style={{fontSize:"26px", color:latBarColor}} class="sr1 col-1 fa-solid fa-triangle-exclamation"/> Informação indisponível.</div>}
+                        {safety===3 && 
+                            <div style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}} className="container bgl marca">
+                                <div className="row">
+                                    <i style={{fontSize:"20px", color:latBarColor}} class="no-pad bgl col-1 fa-solid fa-triangle-exclamation"/>
+                                    <div style={{paddingLeft:5}} className="col-11 marca bgl">Dados insuficientes</div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-1 no-pad bgl"></div>
+                                    <div style={{paddingLeft:5}} className="col-11 marca bgl">Consulte a bula</div>
+                                </div>
+                            </div>}
                     </div>
                     <div class="sc sc2">
                         <a href={urlBula} target="_blank">
