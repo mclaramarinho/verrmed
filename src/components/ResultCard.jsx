@@ -17,13 +17,14 @@ function ResultCard (props){
         <div class="card-container result-card container mb-4" style={{textAlign:"left"}}>
             <div class="c c1 latBar" style={{backgroundColor:latBarColor}}></div>
             <div class="c c2">
-                <div class="ps-2 pt-2 r sr1 marca">{marca}</div>
-                <div class="ps-2 r sr2 droga">{droga}</div>
+                <div class="ps-2 pt-2 r sr1 marca">{marca.toUpperCase()}</div>
+                <div class="ps-2 r sr2 droga">{droga.toUpperCase()}</div>
+                <div className="ps-2 r sr1  marca">{props.forma}</div>
                 <div class="r r2 ">
                     <div class="ps-2 sc sc1 pt-3">
                         {safety===1 && <img className="bgl" src={safeIcon} alt="" />}
                         {safety===2 && <p className="bgl" style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}}>Contem {alergenicos}</p>}
-                        
+                        {safety===3 && <div style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}} className="bgl"><i style={{fontSize:"26px", color:latBarColor}} class="sr1 col-1 fa-solid fa-triangle-exclamation"/> Informação indisponível.</div>}
                     </div>
                     <div class="sc sc2">
                         <a href={urlBula} target="_blank">

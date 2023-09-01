@@ -6,7 +6,7 @@ import ResultCard from "../components/ResultCard";
 import { ClipLoader } from "react-spinners";
 import TopoBtn from "../components/TopoBtn";
 import Footer from "../components/Footer";
-
+import apresentacoes from "../apresentacoes";
 
 function Main(){
     let pages = 0;
@@ -54,23 +54,35 @@ function Main(){
         
     }
     
-    function getPrincipioAtivo (codigo){
+    function getPrincipioAtivo (codigo, what){
         const req = new XMLHttpRequest();
         req.open("GET", `https://bula.vercel.app/medicamento/${codigo}`)
         req.send();
-        let response;
-        return new Promise ((resolve) => {
-            req.onload = () =>{
-                let res = req.response;
-                res = JSON.parse(res);
-                res = res.principioAtivo;
-                response = res;
-                resolve(response)
-            }
-        })
+
+        if(what.includes("principioAtivo")){
+            return new Promise ((resolve) => {
+                req.onload = () =>{
+                    let res = req.response;
+                    res = JSON.parse(res);
+                    resolve(res.principioAtivo)
+                }
+            })
+        }else if(what.includes("apresentacao")){
+            return new Promise ((resolve) => {
+                req.onload = () =>{
+                    let res = req.response;
+                    res = JSON.parse(res);
+                    res = (res.apresentacoes[0].apresentacao);
+                    resolve(res)
+                }
+            })
+        }
+        
         
             
     }
+
+    
     const [searchEnd, setSearchEnd] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -88,8 +100,15 @@ function Main(){
                     let res = req.response;
                     res = JSON.parse(res);
                     res.content.map(async (item) => {
-                        const princ = await getPrincipioAtivo(item.numProcesso)
-                        previa.push([ item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido]);
+                        const princ = await getPrincipioAtivo(item.numProcesso, "principioAtivo")
+                        let forma = await getPrincipioAtivo(item.numProcesso, "apresentacao")
+                        for(let i = 0; i < apresentacoes.length; i++){
+                            if(forma.includes(apresentacoes[i].abrev)){
+                                forma = apresentacoes[i].apresentacao;
+                                break;
+                            }
+                        }
+                        previa.push([item.numProcesso, princ, item.nomeProduto, item.razaoSocial, item.idBulaPacienteProtegido, forma]);
                         return setResultado([previa])
                     })
                     resolve();
@@ -136,9 +155,12 @@ function Main(){
                 <div className="text-center mb-5">
                     {resultado.length > 0 && searchEnd===true && (
                         resultado[0].map((item) => {
+                            console.log(item[5])
                             const alergenico = verificarAlergenico(item)
                             const seg = alergenico.includes("false") ? 3 : alergenico.length > 0 ? 2 : 1;
-                            return <ResultCard alergenicos={alergenico} seg={seg} droga={item[2]} marca={item[3]} bula={item[4]}/>
+                            if(!item[5].includes("Injetável")){
+                                return <ResultCard forma={item[5]} alergenicos={alergenico} seg={seg} droga={item[2]} marca={item[3]} bula={item[4]}/>
+                            }
                         })
                     )}
 
