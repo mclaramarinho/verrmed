@@ -145,6 +145,10 @@
     font-weight: 700;
     color: #294F40;
 }
+.forma{
+    border-top-right-radius: 0px !important;
+    
+}
 .card-container{
     display: flex;
     border-radius: 10px;

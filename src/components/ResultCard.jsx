@@ -19,7 +19,7 @@ function ResultCard (props){
             <div class="c c2">
                 <div class="ps-2 pt-2 r sr1 marca">{marca.toUpperCase()}</div>
                 <div class="ps-2 r sr2 droga">{droga.toUpperCase()}</div>
-                <div className="ps-2 r sr1  marca">{props.forma}</div>
+                <div className="ps-2 r sr1 marca forma">{props.forma}</div>
                 <div class="r r2 ">
                     <div class="ps-2 sc sc1 pt-3">
                         {safety===1 && <img className="bgl" src={safeIcon} alt="" />}
