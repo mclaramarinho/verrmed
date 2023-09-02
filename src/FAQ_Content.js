@@ -12,7 +12,7 @@ const FAQ_Content = [
     {
         id: "q3",
         p: "O que significa o resultado amarelo?",
-        r: ""
+        r: "Este resultado é exibido quando o medicamento não indica o princípio ativo, que é a substância responsável pelo efeito terapêutico. Se você encontrar esse resultado, consulte a bula para obter informações sobre os componentes do medicamento em questão."
     },
     {
         id: "q4",
