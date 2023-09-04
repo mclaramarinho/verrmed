@@ -8,7 +8,9 @@ function SearchArea (props){
 
     const busca = props.handleBusca;
 
-    let alergias = meds.sort();
+    // let alergias = meds.sort();
+
+    let alergias = meds.sort(new Intl.Collator('pt').compare)
     alergias = alergias.map((item, index) =>{
         return {name: item, id:index+1}
     })
