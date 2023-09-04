@@ -15,11 +15,11 @@ function Navbar (){
                                 SOBRE NÓS
                             </a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a href="/contato" className="nav-link active" aria-current="page">
                                 CONTATO
                             </a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a href="/faq" className="nav-link active" aria-current="page">
                                 PERGUNTAS FREQUENTES
