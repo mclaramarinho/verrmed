@@ -6,13 +6,13 @@ function TeamMember(props){
     const avatar = props.avatar.length===0 ? avatarDef : props.avatar;
     if(align==="left"){
         return(
-            <div className="row mb-4" id="team-member-container">
+            <div className="row mb-4 dark-green ">
                 <div className="col-3">
                     <img className="mw-100 avatar" src={avatar} alt="" />
                 </div>
                 <div className="col">
                     <div className="row">
-                        <div className="col member-name no-pad" >
+                        <div className="col member-name semi-bold no-pad" >
                             {props.nome.toUpperCase()}
                         </div>
                     </div>
@@ -25,10 +25,10 @@ function TeamMember(props){
             </div>
     )}else if(align==="right"){
         return(
-            <div className="row mb-4" style={{textAlign:"right"}} id="team-member-container">
+            <div className="row mb-4 dark-green align-right">
                 <div className="col">
                     <div className="row">
-                        <div className="col member-name no-pad" >
+                        <div className="col member-name semi-bold no-pad" >
                             {props.nome.toUpperCase()}
                         </div>
                     </div>

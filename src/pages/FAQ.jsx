@@ -10,7 +10,7 @@ function FAQ (){
         <div className="altPage">
             <AltNav />
             <Header title={"PERGUNTAS FREQUENTES"}/>
-            <div className="accordion" id="faq">
+            <div className="accordion def-container" id="faq">
                 {FAQ_Content.map(item => {
                     return <AccordionItem
                         id={item.id}

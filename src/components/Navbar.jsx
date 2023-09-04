@@ -9,19 +9,19 @@ function Navbar (){
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="menu-options">
-                    <ul className="navbar-nav mt-3 ms-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav align-right mt-3 ms-auto mb-2 mb-lg-0">
                         <li className="nav-item" >
-                            <a href="/sobre" className="nav-link active" aria-current="page">
+                            <a href="/sobre" className="dark-green bold nav-link active" aria-current="page">
                                 SOBRE NÓS
                             </a>
                         </li>
                         {/* <li className="nav-item">
-                            <a href="/contato" className="nav-link active" aria-current="page">
+                            <a href="/contato" className="dark-green bold nav-link active" aria-current="page">
                                 CONTATO
                             </a>
                         </li> */}
                         <li className="nav-item">
-                            <a href="/faq" className="nav-link active" aria-current="page">
+                            <a href="/faq" className="nav-link dark-green bold active" aria-current="page">
                                 PERGUNTAS FREQUENTES
                             </a>
                         </li>

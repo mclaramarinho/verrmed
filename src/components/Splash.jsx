@@ -3,7 +3,7 @@ import splashLogo from "../assets/logo-splash-screen.png"
 import { BarLoader } from "react-spinners";
 function Splash (){
     return(
-        <div style={{backgroundColor: "#E5F2ED", height:"100vh"}}>
+        <div className="light-green-bg" style={{height:"100vh"}}>
             <div className="position-absolute translate-middle top-50 start-50" style={{position: "fixed", boxSizing:"border-box"}}>
                 <img src={splashLogo} alt="" style={{maxWidth:"90vw"}}/>
                 <BarLoader

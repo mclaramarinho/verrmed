@@ -14,31 +14,31 @@ function ResultCard (props){
     const urlBula = `https://bula.vercel.app/pdf?id=${props.bula}`
     return(
             
-        <div class="card-container result-card container mb-4" style={{textAlign:"left"}}>
-            <div class="c c1 latBar" style={{backgroundColor:latBarColor}}></div>
-            <div class="c c2">
-                <div class="ps-2 pt-2 r sr1 marca">{marca.toUpperCase()}</div>
-                <div class="ps-2 r sr2 droga">{droga.toUpperCase()}</div>
-                <div className="ps-2 r sr1 marca forma">{props.forma}</div>
-                <div class="r r2 ">
-                    <div class="ps-2 sc sc1 pt-3">
-                        {safety===1 && <img className="bgl" src={safeIcon} alt="" />}
-                        {safety===2 && <p className="bgl" style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}}>Contém {alergenicos}</p>}
+        <div class="def-container border-10 d-flex result-card container mb-4 align-left">
+            <div class="c1 border-t-l border-b-l d-inline-block" style={{backgroundColor:latBarColor}}></div>
+            <div class="border-b-r border-t-r w-100">
+                <div class="ps-2 pt-2 off-white-bg border-t-r dark-green marca">{marca.toUpperCase()}</div>
+                <div class="ps-2 off-white-bg bold dark-green droga">{droga.toUpperCase()}</div>
+                <div className="ps-2 off-white-bg marca dark-green">{props.forma}</div>
+                <div class="d-flex">
+                    <div class="ps-2 off-white-bg mw-100 sc1 pt-3">
+                        {safety===1 && <img className="off-white-bg" src={safeIcon} alt="" />}
+                        {safety===2 && <p className="off-white-bg dark-green italic">Contém {alergenicos}</p>}
                         {safety===3 && 
-                            <div style={{color:"#294F40", fontWeight:600, fontStyle:"italic"}} className="container bgl marca">
+                            <div className="italic semi-bold dark-green container off-white-bg marca">
                                 <div className="row">
-                                    <i style={{fontSize:"20px", color:latBarColor}} class="no-pad bgl col-1 fa-solid fa-triangle-exclamation"/>
-                                    <div style={{paddingLeft:5}} className="col-11 marca bgl">Dados insuficientes</div>
+                                    <i style={{fontSize:"20px", color:latBarColor}} class="no-pad off-white-bg col-1 fa-solid fa-triangle-exclamation"/>
+                                    <div style={{paddingLeft:5}} className="col-11 marca off-white-bg">Dados insuficientes</div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-1 no-pad bgl"></div>
-                                    <div style={{paddingLeft:5}} className="col-11 marca bgl">Consulte a bula</div>
+                                    <div className="col-1 no-pad off-white-bg"></div>
+                                    <div style={{paddingLeft:5}} className="col-11 marca off-white-bg">Consulte a bula</div>
                                 </div>
                             </div>}
                     </div>
-                    <div class="sc sc2">
+                    <div class="off-white-bg mw-100 sc2 border-b-r align-right">
                         <a href={urlBula} target="_blank">
-                            <img className="bgl" src={bulaBtn} alt="" />
+                            <img className="off-white-bg" src={bulaBtn} alt="" />
                         </a>
                     </div>
                 </div>

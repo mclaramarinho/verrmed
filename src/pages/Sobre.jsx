@@ -11,7 +11,7 @@ function Sobre (){
         <div>
             <AltNav />
             
-            <div id="sobre">
+            <div className="def-container" id="sobre">
                 <Header title={"SOBRE"} />
                 {sobre_Content.map(item => 
                     <SobreInfo title={item.title} content={item.content} />
@@ -29,6 +29,7 @@ function Sobre (){
                         )
                     })}
                 </div>
+                <p className="text-center dark-green mt-5" style={{fontStyle:"italic"}}>verrmed@gmail.com</p>
             </div>
             <Footer position={"static"}/>
         </div>
