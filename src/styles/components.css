@@ -308,3 +308,7 @@ h3{
 .L2{
     font-size: 2vh;
 }
+
+.MuiDialog-container, .MuiDialog-scrollPaper{
+    background-color: transparent !important;
+}

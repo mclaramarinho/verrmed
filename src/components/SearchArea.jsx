@@ -26,10 +26,10 @@ function SearchArea (props){
     
     return(
         <div className="container searchArea">
-            <Dialog open={helpOne} onClose={()=>setHelpOne(false)}>
+            <Dialog style={{backgroundColor:"transparent"}} open={helpOne} onClose={()=>setHelpOne(false)}>
                 <DialogContent>Você deve inserir o nome do medicamento que deseja pesquisar</DialogContent>
             </Dialog>
-            <Dialog open={helpTwo} onClose={()=>setHelpTwo(false)}>
+            <Dialog style={{backgroundColor:"transparent"}} open={helpTwo} onClose={()=>setHelpTwo(false)}>
                 <DialogContent>Você deve inserir 1 ou mais alergias para realizar a busca</DialogContent>
             </Dialog>
 

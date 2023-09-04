@@ -8,6 +8,7 @@ import TopoBtn from "../components/TopoBtn";
 import Footer from "../components/Footer";
 import apresentacoes from "../apresentacoes";
 import ResultNotFound from "../components/ResultNotFound";
+import { Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 
 function Main(){
     let pages = 0;
@@ -87,7 +88,6 @@ function Main(){
     
     const [searchEnd, setSearchEnd] = useState(false);
     const [loading, setLoading] = useState(false);
-
     async function generateResult(text, p) {
         setFooterPosition("fixed")
         setLoading(true);
@@ -141,12 +141,23 @@ function Main(){
     }
     
     const [footerPosition, setFooterPosition] = useState();
+    const [acceptTerms, setAcceptTerms] = useState(true);
 
     if(splash){
         return <Splash />
     }else{
         return(
             <div>
+                <Dialog style={{backgroundColor:"transparent"}} open={acceptTerms}>
+                    <DialogTitle style={{fontWeight:700,color:"#294F40"}}>TERMOS DE USO</DialogTitle>
+                    <DialogContent style={{fontWeight:600,color:"#294F40"}}>A empresa destaca a segurança dos usuários ao usar o Verr Med, um serviço informativo sobre medicamentos. O aplicativo não substitui uma consulta médica e não se responsabiliza por danos causados pela automedicação, enfatizando a importância de buscar orientação de um profissional de saúde para decisões seguras sobre medicamentos.</DialogContent>
+                    <DialogActions>
+                        <button className="btn btn-md" onClick={()=>window.history.back(-1)} style={{backgroundColor:"#990000", opacity:0.5, color:"white", fontWeight:700}}>Não aceito</button>
+                        <button className="btn btn-md" onMouseUp={()=>setAcceptTerms(false)} style={{backgroundColor:"#294F40", color:"white", fontWeight:700}}>Aceito</button>
+                    </DialogActions>
+                </Dialog>
+
+
                 <Navbar/>
                 <SearchArea 
                     textError={textError}
