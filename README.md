@@ -39,6 +39,6 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 
 ### SCREENSHOTS
 <div style={display: "flex"}>
-    <div style={width: 50%}![SPLASH SCREEN](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)></div>
+    <div style={width: 50%}>![SPLASH SCREEN](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)</div>
 </div>
 
