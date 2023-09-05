@@ -39,4 +39,10 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 
 ### SCREENSHOTS
 <img width="50%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" />
+<caption>Splash Screen</caption>
 
+### AUTHORS
+
+## Authors
+
+- [@mclaramarinho](https://www.github.com/mclaramarinho)
