@@ -39,18 +39,18 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 
 ### SCREENSHOTS
 <div style="display: flex">
-    <div style="width: 25%">
-        [Splash Screen] <br>
-        <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" /><br>
-        2 seconds delay
-    </div>
-    
-    <div style="width: 25%">
-        [Termos de Uso]<br>
-        <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2" /><br>
-        To accept the terms of use → procced to app<br>
-        To decline → goes back to previous page
-    </div>
+<div style="width: 25%">
+    [Splash Screen] <br>
+    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" /><br>
+    2 seconds delay
+</div>
+
+<div style="width: 25%">
+    [Termos de Uso]<br>
+    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2" /><br>
+    To accept the terms of use → procced to app<br>
+    To decline → goes back to previous page
+</div>
 </div>
 
 ### AUTHORS
