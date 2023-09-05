@@ -38,10 +38,12 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 5. The user hits the search button to start the search if all the fields are filled
 
 ### SCREENSHOTS
-[Splash Screen]<img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" />
+[Splash Screen]
+<img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" />
 2 seconds delay
 
-[Termos de Uso]<img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2" />
+[Termos de Uso]
+<img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2" />
 To accept the terms of use → procced to app
 To decline → goes back to previous page
 
