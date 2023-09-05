@@ -36,3 +36,6 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 3. The user selects at least one allergen on the search field
     (not selecting prevents the user from searching and returns an error message)
 5. The user hits the search button to start the search if all the fields are filled
+
+### SCREENSHOTS
+![SPLASH SCREEN](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)
