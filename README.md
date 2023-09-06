@@ -44,28 +44,12 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 |                |                | 
 | ---------------|----------------|
 | ![](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/ffc1d748-aa23-4fd0-b710-2609ba498171)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/6c6a4364-df3c-4d91-909b-72d74d60e4cf)|
-| ![]()| ![]()|
-| ![]()| ![]()|
+| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/ad2d3498-c209-44e8-b711-ca8a4f7ff393)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/f7be65a8-0d04-4808-9de1-a9d1865aa2fe)|
+| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/864db2d3-e7ef-4b3d-9da8-d84163a614f2)| ![]()|
 
-<div style="width: 25%">
-    <br>
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/ad2d3498-c209-44e8-b711-ca8a4f7ff393" />
-    <br>
-    Result cards after search is completed
-</div>
-<div style="width: 25%">
-    <br>
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/f7be65a8-0d04-4808-9de1-a9d1865aa2fe" />
-    <br>
-    "Limpar Filtro" button to clean the allergens input
-</div>
-<div style="width: 25%">
-    <br>
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/864db2d3-e7ef-4b3d-9da8-d84163a614f2" />
-    <br>
-    FAQ
-</div>
-</div>
+
+
+
 
 ## Authors
 
