@@ -1,16 +1,16 @@
 # Verr Med
 
-Um aplicativo web para consulta de medicamentos e identificação da presença de substâncias alergênicas neles.
+A web app to identify the presence of allergens in pharmaceutical drugs
 
 [Acesse aqui!](verr-med.netlify.app)
 
 
 ## Features
 
-- Search medicine by name
-- Results are designed to be intuitive, indicating wether the drug contains or not the allergens input on the search
-- Mobile responsiveness
-- Baixar bula
+- Search drugs by name
+- Results are designed to be intuitive, indicating whether the drug contains or not the allergens input on the search
+- Download package insert/leaflet
+
 
 ## License
 
@@ -26,50 +26,32 @@ Verr Med was developed for people who struggle with drug allergies, with the end
 **IMPORTANT!**
 Verr Med is *destinated only for informative purposes and does not encourage self medication.* We make the effort to keep the information provided simple and safe for the users, and *we do not take responsibility for any damage that might come from the misuse of the app*.
 
+
 ### Tech Stack
-**Client**: HTML5, CSS, Javascript, ES6, ReactJS
+**Client**: HTML5, CSS, Javascript, ES6, ReactJS <br>
 API used to automate search: [Bulario API - documentation](https://bula.vercel.app/docs) | [Bulario API - GH](https://github.com/iuryLandin/bulario-api)
+
 
 ### How does it work?
 1. The user types in the name of the drug they intend to take
     (the name typed must be an exact match OR a piece of the original name)
 3. The user selects at least one allergen on the search field
     (not selecting prevents the user from searching and returns an error message)
-5. The user hits the search button to start the search if all the fields are filled
+5. The user hits the search button and if all the fields are filled the search is started.
+6. Some HTTP requests are made to the API in order to get the info needed for the results: name of the product, name of the pharmaceutic company, drug presentation form, the active substances and the package insert/leaflet.
+7. If there are no matches to the name inserted on the search field, the result returns an error message to the user on the screen. Otherwise, it returns a card for each product found in the search, with their corresponding information. Each card provides information on whether the product contains or not the allergens input on the search field. A red-labelled card indicates the product contains the allergens; a green-labelled card indicates that it does not contain any of the allergens; and a yellow-labelled card indicates that it was not possible to retrieve this information from the database, therefore it cannot indicate whether this specific product contains or not the allergens.
+   **Only products administrated orally or topically (on the skin) are shown in the results**
+
 
 ### SCREENSHOTS
-<div style="width: 25%">
-    [Splash Screen] <br>
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" /><br>
-    2 seconds delay
-</div>
-<div style="width: 25%">
-    [Termos de Uso]<br>
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2" /><br>
-    To accept the terms of use → procced to app<br>
-    To decline → goes back to previous page
-</div>
-<div style="width: 25%">
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/ffc1d748-aa23-4fd0-b710-2609ba498171" /><br>
-    Loading animation while the API is working
-</div>
 
-<div style="width: 25%">
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/6c6a4364-df3c-4d91-909b-72d74d60e4cf" /><br>
-    Error message after trying to search with empty input fields
-</div>
-<div style="width: 25%">
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/ad2d3498-c209-44e8-b711-ca8a4f7ff393" /><br>
-    Result cards after search is completed
-</div>
-<div style="width: 25%">
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/f7be65a8-0d04-4808-9de1-a9d1865aa2fe" /><br>
-    "Limpar Filtro" button to clean the allergens input
-</div>
-<div style="width: 25%">
-    <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/864db2d3-e7ef-4b3d-9da8-d84163a614f2" /><br>
-    FAQ
-</div>
+|                |                | 
+| ---------------|----------------|
+| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/ffc1d748-aa23-4fd0-b710-2609ba498171)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/6c6a4364-df3c-4d91-909b-72d74d60e4cf)|
+| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/ad2d3498-c209-44e8-b711-ca8a4f7ff393)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/f7be65a8-0d04-4808-9de1-a9d1865aa2fe)|
+| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/864db2d3-e7ef-4b3d-9da8-d84163a614f2)| ![]()|
+
+
 ## Authors
 
 - [@mclaramarinho](https://www.github.com/mclaramarinho)
