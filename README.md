@@ -27,7 +27,7 @@ Verr Med was developed for people who struggle with drug allergies, with the end
 Verr Med is *destinated only for informative purposes and does not encourage self medication.* We make the effort to keep the information provided simple and safe for the users, and *we do not take responsibility for any damage that might come from the misuse of the app*.
 
 ### Tech Stack
-**Client**: HTML5, CSS, Javascript, ES6, ReactJS
+**Client**: HTML5, CSS, Javascript, ES6, ReactJS <br>
 API used to automate search: [Bulario API - documentation](https://bula.vercel.app/docs) | [Bulario API - GH](https://github.com/iuryLandin/bulario-api)
 
 ### How does it work?
