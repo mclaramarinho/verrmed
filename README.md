@@ -41,9 +41,9 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 
 ### SCREENSHOTS
 
-| DETAILS               | SCREENSHOT                                                |
-| ----------------- | ---------------------------------------------------------------- |
-| Cor exemplo       | <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" /> |
+|                |                |                |                |
+| ---------------|----------------|----------------|----------------|
+| <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" /> 2 seconds delay| <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2" /> |
 | Cor exemplo       |  |
 | Cor exemplo       |  |
 | Cor exemplo       |  |
