@@ -29,7 +29,7 @@ const FAQ_Content = [
         p: "O aplicativo fornece a bula dos medicamentos?",
         r: "No resultado, dentro da caixa contendo o nome do medicamento, há um botão com o ícone de uma seta apontando para baixo e o nome BULA. Ao clicar no botão será feito o download da bula do medicamento."
     },
-    // {
+    // { 
     //     id: "q7",
     //     p: "Achei um erro no aplicativo. O que devo fazer?",
     //     r: "No menu, selecione CONTATO. Preencha o formulário com o seu nome e email (caso queira ser contactado), selecione o motivo do contato (nesse caso “reportar um problema”), e descreva detalhadamente o erro para que possamos corrigi-lo o mais rápido o possível."
