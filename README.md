@@ -35,7 +35,9 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
     (the name typed must be an exact match OR a piece of the original name)
 3. The user selects at least one allergen on the search field
     (not selecting prevents the user from searching and returns an error message)
-5. The user hits the search button to start the search if all the fields are filled
+5. The user hits the search button and if all the fields are filled the search is started.
+6. Some HTTP requests are made to the API in order to get the info needed for the results: name of the product, name of the pharmaceutic company, pharmaceutical presentation, the active substances and the package insert/leaflet.
+7. If there are no matches to the name inserted on the search field, the result returns an error message to the user on the screen. Otherwise, it returns a card for each product found in the search, with their corresponding information. Each card provides information on wether the product contains or not the allergens input on the search field. A red-labelled card indicates the product contains the allergens; a green-labelled card indicates that it does not contain any of the allergens; and a yellow-labelled card indicates that it was not possible to retrieve this information from the database, therefore it cannot indicate wether this specific product contains or not the allergens.
 
 ### SCREENSHOTS
 <div style="width: 25%">
@@ -70,6 +72,8 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
     <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/864db2d3-e7ef-4b3d-9da8-d84163a614f2" /><br>
     FAQ
 </div>
+
+
 ## Authors
 
 - [@mclaramarinho](https://www.github.com/mclaramarinho)
