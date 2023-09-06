@@ -8,7 +8,7 @@ A web app to identify the presence of allergens in pharmaceutical drugs
 ## Features
 
 - Search medicine by name
-- Results are designed to be intuitive, indicating wether the drug contains or not the allergens input on the search
+- Results are designed to be intuitive, indicating whether the drug contains or not the allergens input on the search
 - Mobile responsiveness
 - Baixar bula
 
@@ -40,7 +40,7 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
     (not selecting prevents the user from searching and returns an error message)
 5. The user hits the search button and if all the fields are filled the search is started.
 6. Some HTTP requests are made to the API in order to get the info needed for the results: name of the product, name of the pharmaceutic company, drug presentation form, the active substances and the package insert/leaflet.
-7. If there are no matches to the name inserted on the search field, the result returns an error message to the user on the screen. Otherwise, it returns a card for each product found in the search, with their corresponding information. Each card provides information on wether the product contains or not the allergens input on the search field. A red-labelled card indicates the product contains the allergens; a green-labelled card indicates that it does not contain any of the allergens; and a yellow-labelled card indicates that it was not possible to retrieve this information from the database, therefore it cannot indicate wether this specific product contains or not the allergens.
+7. If there are no matches to the name inserted on the search field, the result returns an error message to the user on the screen. Otherwise, it returns a card for each product found in the search, with their corresponding information. Each card provides information on whether the product contains or not the allergens input on the search field. A red-labelled card indicates the product contains the allergens; a green-labelled card indicates that it does not contain any of the allergens; and a yellow-labelled card indicates that it was not possible to retrieve this information from the database, therefore it cannot indicate whether this specific product contains or not the allergens.
    **Only products administrated orally or topically (on the skin) are shown in the results**
 
 
