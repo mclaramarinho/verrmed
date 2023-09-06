@@ -43,7 +43,8 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 
 |                |                | 
 | ---------------|----------------|
-| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2) To accept the terms of use → procced to app / To decline → goes back to previous page| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/ffc1d748-aa23-4fd0-b710-2609ba498171) Loading animation while the API is working| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/6c6a4364-df3c-4d91-909b-72d74d60e4cf) Error message after trying to search with empty input fields|
+| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c)| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/7ae51960-75a7-4a14-bdba-bab7e7eaefd2) To accept the terms of use → procced to app
+To decline → goes back to previous page| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/ffc1d748-aa23-4fd0-b710-2609ba498171) Loading animation while the API is working| ![](https://github.com/mclaramarinho/verrmed/assets/119897667/6c6a4364-df3c-4d91-909b-72d74d60e4cf) Error message after trying to search with empty input fields|
 | ![]()| ![]()|
 | ![]()| ![]()|
 
