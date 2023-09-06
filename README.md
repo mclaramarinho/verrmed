@@ -40,6 +40,7 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
 7. If there are no matches to the name inserted on the search field, the result returns an error message to the user on the screen. Otherwise, it returns a card for each product found in the search, with their corresponding information. Each card provides information on wether the product contains or not the allergens input on the search field. A red-labelled card indicates the product contains the allergens; a green-labelled card indicates that it does not contain any of the allergens; and a yellow-labelled card indicates that it was not possible to retrieve this information from the database, therefore it cannot indicate wether this specific product contains or not the allergens.
 
 ### SCREENSHOTS
+<div style="display: flex;">
 <div style="width: 25%">
     [Splash Screen] <br>
     <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/e37b9371-6291-43e6-ab17-e05bd6717c9c" /><br>
@@ -72,7 +73,7 @@ API used to automate search: [Bulario API - documentation](https://bula.vercel.a
     <img width="25%" src="https://github.com/mclaramarinho/verrmed/assets/119897667/864db2d3-e7ef-4b3d-9da8-d84163a614f2" /><br>
     FAQ
 </div>
-
+</div>
 
 ## Authors
 
