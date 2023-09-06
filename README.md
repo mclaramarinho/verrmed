@@ -7,10 +7,9 @@ A web app to identify the presence of allergens in pharmaceutical drugs
 
 ## Features
 
-- Search medicine by name
+- Search drugs by name
 - Results are designed to be intuitive, indicating whether the drug contains or not the allergens input on the search
-- Mobile responsiveness
-- Baixar bula
+- Download package insert/leaflet
 
 
 ## License
