@@ -29,21 +29,21 @@ const FAQ_Content = [
         p: "O aplicativo fornece a bula dos medicamentos?",
         r: "No resultado, dentro da caixa contendo o nome do medicamento, há um botão com o ícone de uma seta apontando para baixo e o nome BULA. Ao clicar no botão será feito o download da bula do medicamento."
     },
-    {
-        id: "q7",
-        p: "Achei um erro no aplicativo. O que devo fazer?",
-        r: "No menu, selecione CONTATO. Preencha o formulário com o seu nome e email (caso queira ser contactado), selecione o motivo do contato (nesse caso “reportar um problema”), e descreva detalhadamente o erro para que possamos corrigi-lo o mais rápido o possível."
-    },
+    // {
+    //     id: "q7",
+    //     p: "Achei um erro no aplicativo. O que devo fazer?",
+    //     r: "No menu, selecione CONTATO. Preencha o formulário com o seu nome e email (caso queira ser contactado), selecione o motivo do contato (nesse caso “reportar um problema”), e descreva detalhadamente o erro para que possamos corrigi-lo o mais rápido o possível."
+    // },
     {
         id: "q8",
         p: "Qual base de dados é utilizada?",
         r: "É utilizada a base de dados da Anvisa, através de uma busca automatizada no bulário eletrônico."
     },
-    {
-        id: "q9",
-        p: "Tive uma reação alérgica mesmo o medicamento sendo listado como seguro. O que fazer?",
-        r: "Busque auxílio médico imediatamente após notar algum sintoma de alergia. Anote o nome da medicação para evitar consumi-la futuramente e consulte um alergologista.Reporte o acontecimento ao VerrMed na página de contato para que possamos analisar o ocorrido.."
-    },
+    // {
+    //     id: "q9",
+    //     p: "Tive uma reação alérgica mesmo o medicamento sendo listado como seguro. O que fazer?",
+    //     r: "Busque auxílio médico imediatamente após notar algum sintoma de alergia. Anote o nome da medicação para evitar consumi-la futuramente e consulte um alergologista.Reporte o acontecimento ao VerrMed na página de contato para que possamos analisar o ocorrido.."
+    // },
     {
         id: "q10",
         p: "O Verr Med está disponível na App/Play Store?",
