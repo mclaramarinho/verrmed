@@ -4,7 +4,7 @@ function ResultNotFound (){
     return(
         <div className="container def-container dark-green" id="ResultNotFound">
             <div className="row mb-3">
-                <i style={{fontSize:"9vh"}} class="col fa-regular fa-face-frown-open"></i>
+                <i style={{fontSize:"9vh"}} className="col fa-regular fa-face-frown-open"></i>
             </div>
             <div className="row">
                 <div className="col bold L1">NENHUM RESULTADO ENCONTRADO!</div>

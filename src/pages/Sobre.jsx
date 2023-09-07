@@ -18,7 +18,6 @@ function Sobre (){
                 )}
                 <div className="container">
                     {teamMembers.map(item => {
-                        console.log(item.avatar)
                         return item.nome.length > 0 && (
                             <TeamMember
                                 align={item.id % 2 === 0 ? "right" : "left"}

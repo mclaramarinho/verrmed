@@ -1,5 +1,6 @@
 import React from "react";
 import avatarDef from "../assets/avatar-default.png"
+import LazyLoad from "react-lazyload";
 
 function TeamMember(props){
     const align = props.align;
@@ -8,7 +9,7 @@ function TeamMember(props){
         return(
             <div className="row mb-4 dark-green ">
                 <div className="col-3">
-                    <img className="mw-100 avatar" src={avatar} alt="" />
+                        <img className="mw-100 avatar" src={avatar} alt="" />
                 </div>
                 <div className="col">
                     <div className="row">
@@ -40,7 +41,7 @@ function TeamMember(props){
                 </div>
                 
                 <div className="col-3">
-                    <img className="mw-100 avatar" src={avatar} alt="" />
+                        <img className="mw-100 avatar" src={avatar} alt="" />
                 </div>
                 
             </div>
