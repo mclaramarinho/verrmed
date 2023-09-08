@@ -1,6 +1,5 @@
 import React from "react";
 import avatarDef from "../assets/avatar-default.png"
-import LazyLoad from "react-lazyload";
 
 function TeamMember(props){
     const align = props.align;
