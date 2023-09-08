@@ -1,5 +1,5 @@
 const teamMembers = [
-    {
+    { 
         id:1,
         nome:"Clara Marinho",
         funcao:"Desenvolvedora front-end",
