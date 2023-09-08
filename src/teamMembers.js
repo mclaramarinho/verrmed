@@ -26,7 +26,7 @@ const teamMembers = [
     {
         id:5,
         nome:"Victor Melo",
-        funcao: "WebWriter",
+        funcao: "Webwriter",
         avatar: "https://i.ibb.co/qjZ1s6C/victor-melo.png"
     }
 ]
