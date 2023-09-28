@@ -141,21 +141,31 @@ function Main(){
     }
     
     const [footerPosition, setFooterPosition] = useState();
-    const [acceptTerms, setAcceptTerms] = useState(true);
+
+    const [acceptTerms, setAcceptTerms] = useState(
+        (sessionStorage.getItem("acceptTerms") === true || sessionStorage.getItem("acceptTerms") === null ? true : false)
+    );
+
+    useEffect(() => {
+        sessionStorage.setItem("acceptTerms", acceptTerms)
+    }, [acceptTerms])
 
     if(splash){
         return <Splash />
     }else{
         return(
             <div>
-                <Dialog style={{backgroundColor:"transparent"}} open={acceptTerms}>
-                    <DialogTitle style={{fontWeight:700,color:"#294F40"}}>TERMOS DE USO</DialogTitle>
-                    <DialogContent style={{fontWeight:600,color:"#294F40"}}>A empresa destaca a segurança dos usuários ao usar o Verr Med, um serviço informativo sobre medicamentos. O aplicativo não substitui uma consulta médica e não se responsabiliza por danos causados pela automedicação, enfatizando a importância de buscar orientação de um profissional de saúde para decisões seguras sobre medicamentos.</DialogContent>
-                    <DialogActions>
-                        <button className="btn btn-md" onClick={()=>window.history.back(-1)} style={{backgroundColor:"#990000", opacity:0.5, color:"white", fontWeight:700}}>Não aceito</button>
-                        <button className="btn btn-md" onMouseUp={()=>setAcceptTerms(false)} style={{backgroundColor:"#294F40", color:"white", fontWeight:700}}>Aceito</button>
-                    </DialogActions>
-                </Dialog>
+                {acceptTerms && (
+                    <Dialog style={{backgroundColor:"transparent"}} open={acceptTerms}>
+                        <DialogTitle style={{fontWeight:700,color:"#294F40"}}>TERMOS DE USO</DialogTitle>
+                        <DialogContent style={{fontWeight:600,color:"#294F40"}}>A empresa destaca a segurança dos usuários ao usar o Verr Med, um serviço informativo sobre medicamentos. O aplicativo não substitui uma consulta médica e não se responsabiliza por danos causados pela automedicação, enfatizando a importância de buscar orientação de um profissional de saúde para decisões seguras sobre medicamentos.</DialogContent>
+                        <DialogActions>
+                            <button className="btn btn-md" onClick={()=>window.history.back(-1)} style={{backgroundColor:"#990000", opacity:0.5, color:"white", fontWeight:700}}>Não aceito</button>
+                            <button className="btn btn-md" onMouseUp={()=>{setAcceptTerms(false)}} style={{backgroundColor:"#294F40", color:"white", fontWeight:700}}>Aceito</button>
+                        </DialogActions>
+                    </Dialog>
+                )}
+                
 
 
                 <Navbar/>
